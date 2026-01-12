@@ -1,6 +1,5 @@
 package hu.bp.movieinfo.client;
 
-import ch.qos.logback.core.util.FixedDelay;
 import hu.bp.movieinfo.MovieInfoConfigurationProperties;
 import hu.bp.movieinfo.data.Movie;
 import hu.bp.movieinfo.data.moviedb.Credits;
@@ -10,20 +9,14 @@ import io.netty.handler.ssl.SslContextBuilder;
 import io.netty.handler.ssl.util.InsecureTrustManagerFactory;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
-import org.springframework.http.client.reactive.ClientHttpConnector;
 import org.springframework.http.client.reactive.ReactorClientHttpConnector;
 import org.springframework.stereotype.Component;
 import org.springframework.web.reactive.function.client.WebClient;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 import reactor.netty.http.client.HttpClient;
-import reactor.netty.tcp.SslProvider;
-import reactor.netty.tcp.TcpClient;
 
-import java.time.Duration;
 import java.util.List;
-import java.util.stream.IntStream;
 
 /**
  * Gets a movie list from themoviedb.org
@@ -146,24 +139,23 @@ public class MoviedbClient implements IMovieClient {
 	// http://blog.rohrpostix.net/spring-webflux-webclient-using-ssl/
 	// TODO: not for production
 	private WebClient buildWebClient(String baseUrl) {
-		SslProvider sslProvider =
-				SslProvider.builder().sslContext(
-						SslContextBuilder.forClient().
-								trustManager(InsecureTrustManagerFactory.INSTANCE)
-				).
-		defaultConfiguration(SslProvider.DefaultConfigurationType.NONE).build();
+		try {
+			HttpClient httpClient = HttpClient.create()
+					.secure(sslContextSpec -> sslContextSpec.sslContext(
+							SslContextBuilder.forClient()
+									.trustManager(InsecureTrustManagerFactory.INSTANCE)
+					));
 
-		TcpClient tcpClient = TcpClient.create().secure(sslProvider);
+			ReactorClientHttpConnector httpConnector = new ReactorClientHttpConnector(httpClient);
 
-		HttpClient httpClient = HttpClient.from(tcpClient);
-
-		ClientHttpConnector httpConnector = new ReactorClientHttpConnector(httpClient);
-
-		WebClient webClient =
-				WebClient.builder().
-				clientConnector(httpConnector).baseUrl(baseUrl).build();
-
-		return webClient;
+			return WebClient.builder()
+					.clientConnector(httpConnector)
+					.baseUrl(baseUrl)
+					.build();
+		} catch (Exception e) {
+			log.error("Failed to create SSL WebClient", e);
+			return WebClient.builder().baseUrl(baseUrl).build();
+		}
 	}
 
 }
