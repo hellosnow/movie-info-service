@@ -1,1 +1,10 @@
-*
+# Allow assessment results to be committed
+!README.md
+!report.json
+!assessment-diagram.md
+
+# Ignore temporary assessment files
+.appcat/
+appcat.log
+**/appcat/
+**/appcat.log
