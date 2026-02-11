@@ -1,1 +1,7 @@
+# Allow assessment results
+!report.json
+!assessment-diagram.md
+!README.md
+
+# Ignore everything else
 *
