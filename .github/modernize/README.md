@@ -11,7 +11,7 @@
 
 - **Total Issues Found:** 10
 - **Total Incidents:** 23
-- **Total Story Points:** 0
+- **Total Effort (Story Points):** 77
 
 ### Target Platforms
 
@@ -26,7 +26,7 @@ The assessment has been completed and the detailed report is available in `repor
 
 ### Key Findings
 
-The analysis identified 10 issues across 23 incidents that should be addressed for successful migration to Azure.
+The analysis identified 10 issues across 23 incidents with a total effort of 77 story points that should be addressed for successful migration to Azure.
 
 ## Files Generated
 
