@@ -4,6 +4,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 import org.springframework.web.reactive.function.client.WebClient;
 import reactor.core.publisher.Mono;
+import reactor.util.retry.Retry;
 
 import java.time.Duration;
 
@@ -17,7 +18,7 @@ public class WebClientHelper {
 			mono = client.get().uri(url, urlArgs).
 					retrieve().
 					bodyToMono(bodyClass).
-					retryBackoff(10, Duration.ofSeconds(2));
+					retryWhen(Retry.backoff(10, Duration.ofSeconds(2)));
 
 		} catch (Exception e) {
 			log.error(e.getStackTrace().toString());
