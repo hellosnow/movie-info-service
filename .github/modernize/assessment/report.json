@@ -1,0 +1,792 @@
+{
+  "version": "1.0.0",
+  "producer": "Java AppCAT CLI",
+  "metadata": {
+    "analysisStartTime": "2026-03-20T10:24:47.292255082Z",
+    "analysisEndTime": "2026-03-20T10:25:28.941511258Z",
+    "status": "Complete",
+    "privacyMode": "Protected",
+    "privacyModeHelpUrl": "https://aka.ms/appcat-privacy-mode",
+    "targetIds": [
+      "azure-aks",
+      "azure-appservice",
+      "azure-container-apps"
+    ],
+    "targetDisplayNames": [
+      "Azure Kubernetes Service",
+      "Azure App Service",
+      "Azure Container Apps"
+    ],
+    "capabilities": [],
+    "os": []
+  },
+  "summary": {
+    "totalProjects": 1,
+    "totalIssues": 7,
+    "totalIncidents": 20,
+    "totalEffort": 91,
+    "charts": {
+      "severity": {
+        "mandatory": 16,
+        "optional": 4,
+        "potential": 0,
+        "information": 0
+      },
+      "category": {
+        "cache-service-migration": 1,
+        "deprecated-apis": 3,
+        "framework-upgrade": 7,
+        "local-resource-access": 2,
+        "remote-communication": 7
+      }
+    }
+  },
+  "projects": [
+    {
+      "path": ".",
+      "issues": 7,
+      "storyPoints": 91,
+      "properties": {
+        "appName": "movie-info",
+        "jdkVersion": "17",
+        "frameworks": [
+          "Spring Boot",
+          "Spring"
+        ],
+        "languages": [
+          "Java"
+        ],
+        "tools": [
+          "Maven"
+        ]
+      },
+      "incidents": [
+        {
+          "ruleId": "spring-boot-to-azure-spring-boot-version-01000",
+          "incidentId": "07dfbc69-1ca8-4d42-83d2-60fdf4188e9e",
+          "location": "pom.xml",
+          "locationKind": "File",
+          "line": 42,
+          "column": 0,
+          "targets": {
+            "azure-aks": {
+              "effort": 8,
+              "severity": "mandatory"
+            },
+            "azure-appservice": {
+              "effort": 8,
+              "severity": "mandatory"
+            },
+            "azure-container-apps": {
+              "effort": 8,
+              "severity": "mandatory"
+            }
+          },
+          "labels": [
+            "type=violation",
+            "ruleset=azure/springboot"
+          ]
+        },
+        {
+          "ruleId": "spring-boot-to-azure-spring-boot-version-01000",
+          "incidentId": "fabbb4ad-35f7-4458-a2c0-bbf9a6ac6e8c",
+          "location": "pom.xml",
+          "locationKind": "File",
+          "line": 25,
+          "column": 0,
+          "targets": {
+            "azure-aks": {
+              "effort": 8,
+              "severity": "mandatory"
+            },
+            "azure-appservice": {
+              "effort": 8,
+              "severity": "mandatory"
+            },
+            "azure-container-apps": {
+              "effort": 8,
+              "severity": "mandatory"
+            }
+          },
+          "labels": [
+            "type=violation",
+            "ruleset=azure/springboot"
+          ]
+        },
+        {
+          "ruleId": "spring-boot-to-azure-spring-boot-version-01000",
+          "incidentId": "4a7eb606-cd00-4723-8de7-d3d77f78e0e9",
+          "location": "pom.xml",
+          "locationKind": "File",
+          "line": 65,
+          "column": 0,
+          "targets": {
+            "azure-aks": {
+              "effort": 8,
+              "severity": "mandatory"
+            },
+            "azure-appservice": {
+              "effort": 8,
+              "severity": "mandatory"
+            },
+            "azure-container-apps": {
+              "effort": 8,
+              "severity": "mandatory"
+            }
+          },
+          "labels": [
+            "type=violation",
+            "ruleset=azure/springboot"
+          ]
+        },
+        {
+          "ruleId": "spring-boot-to-azure-spring-boot-version-01000",
+          "incidentId": "6dbf787e-a30b-4798-bf1a-a7d7158c4b28",
+          "location": "pom.xml",
+          "locationKind": "File",
+          "line": 55,
+          "column": 0,
+          "targets": {
+            "azure-aks": {
+              "effort": 8,
+              "severity": "mandatory"
+            },
+            "azure-appservice": {
+              "effort": 8,
+              "severity": "mandatory"
+            },
+            "azure-container-apps": {
+              "effort": 8,
+              "severity": "mandatory"
+            }
+          },
+          "labels": [
+            "type=violation",
+            "ruleset=azure/springboot"
+          ]
+        },
+        {
+          "ruleId": "spring-framework-version-01000",
+          "incidentId": "283e61d1-34e9-4548-8bc0-51a7f213bc03",
+          "location": "pom.xml",
+          "locationKind": "File",
+          "line": 25,
+          "column": 0,
+          "targets": {
+            "azure-aks": {
+              "effort": 8,
+              "severity": "mandatory"
+            },
+            "azure-appservice": {
+              "effort": 8,
+              "severity": "mandatory"
+            },
+            "azure-container-apps": {
+              "effort": 8,
+              "severity": "mandatory"
+            }
+          },
+          "labels": [
+            "type=violation",
+            "ruleset=azure/springboot"
+          ]
+        },
+        {
+          "ruleId": "spring-framework-version-01000",
+          "incidentId": "b6aa3864-340d-4a61-94a8-d5c036eb6189",
+          "location": "pom.xml",
+          "locationKind": "File",
+          "line": 65,
+          "column": 0,
+          "targets": {
+            "azure-aks": {
+              "effort": 8,
+              "severity": "mandatory"
+            },
+            "azure-appservice": {
+              "effort": 8,
+              "severity": "mandatory"
+            },
+            "azure-container-apps": {
+              "effort": 8,
+              "severity": "mandatory"
+            }
+          },
+          "labels": [
+            "type=violation",
+            "ruleset=azure/springboot"
+          ]
+        },
+        {
+          "ruleId": "spring-framework-version-01000",
+          "incidentId": "4a7bd6e2-a84f-4b24-8e93-88745245f8c9",
+          "location": "pom.xml",
+          "locationKind": "File",
+          "line": 42,
+          "column": 0,
+          "targets": {
+            "azure-aks": {
+              "effort": 8,
+              "severity": "mandatory"
+            },
+            "azure-appservice": {
+              "effort": 8,
+              "severity": "mandatory"
+            },
+            "azure-container-apps": {
+              "effort": 8,
+              "severity": "mandatory"
+            }
+          },
+          "labels": [
+            "type=violation",
+            "ruleset=azure/springboot"
+          ]
+        },
+        {
+          "ruleId": "embedded-cache-16000",
+          "incidentId": "80923f89-de70-4818-bd08-fa879b723074",
+          "location": "pom.xml",
+          "locationKind": "File",
+          "line": 25,
+          "column": 0,
+          "targets": {
+            "azure-aks": {
+              "effort": 5,
+              "severity": "mandatory"
+            },
+            "azure-appservice": {
+              "effort": 5,
+              "severity": "mandatory"
+            },
+            "azure-container-apps": {
+              "effort": 5,
+              "severity": "mandatory"
+            }
+          },
+          "labels": [
+            "type=violation",
+            "ruleset=cloud-readiness"
+          ]
+        },
+        {
+          "ruleId": "localhost-http-00001",
+          "incidentId": "8817c8b1-246e-4572-a500-29ef874a8797",
+          "location": "src/test/java/hu/bp/movieinfo/client/OmdbClientTest.java",
+          "locationKind": "File",
+          "line": 14,
+          "column": 0,
+          "targets": {
+            "azure-aks": {
+              "effort": 3,
+              "severity": "mandatory"
+            },
+            "azure-appservice": {
+              "effort": 3,
+              "severity": "mandatory"
+            },
+            "azure-container-apps": {
+              "effort": 3,
+              "severity": "mandatory"
+            }
+          },
+          "labels": [
+            "type=violation",
+            "ruleset=cloud-readiness"
+          ]
+        },
+        {
+          "ruleId": "localhost-http-00001",
+          "incidentId": "49981566-1069-4b6a-ad86-5e9e02462f80",
+          "location": "src/test/java/hu/bp/movieinfo/client/OmdbClientTest.java",
+          "locationKind": "File",
+          "line": 26,
+          "column": 0,
+          "targets": {
+            "azure-aks": {
+              "effort": 3,
+              "severity": "mandatory"
+            },
+            "azure-appservice": {
+              "effort": 3,
+              "severity": "mandatory"
+            },
+            "azure-container-apps": {
+              "effort": 3,
+              "severity": "mandatory"
+            }
+          },
+          "labels": [
+            "type=violation",
+            "ruleset=cloud-readiness"
+          ]
+        },
+        {
+          "ruleId": "hardcoded-urls-00001",
+          "incidentId": "5f1ab724-6abc-40cf-a0d0-804921fc5c19",
+          "location": "src/main/resources/application.properties",
+          "locationKind": "File",
+          "line": 7,
+          "column": 0,
+          "targets": {
+            "azure-aks": {
+              "effort": 3,
+              "severity": "optional"
+            },
+            "azure-appservice": {
+              "effort": 3,
+              "severity": "optional"
+            },
+            "azure-container-apps": {
+              "effort": 3,
+              "severity": "optional"
+            }
+          },
+          "labels": [
+            "type=violation",
+            "ruleset=cloud-readiness"
+          ]
+        },
+        {
+          "ruleId": "hardcoded-urls-00001",
+          "incidentId": "55dc2b8d-43dd-46bb-a29e-1b617cbdb35a",
+          "location": "src/main/resources/application.properties",
+          "locationKind": "File",
+          "line": 8,
+          "column": 0,
+          "targets": {
+            "azure-aks": {
+              "effort": 3,
+              "severity": "optional"
+            },
+            "azure-appservice": {
+              "effort": 3,
+              "severity": "optional"
+            },
+            "azure-container-apps": {
+              "effort": 3,
+              "severity": "optional"
+            }
+          },
+          "labels": [
+            "type=violation",
+            "ruleset=cloud-readiness"
+          ]
+        },
+        {
+          "ruleId": "hardcoded-urls-00001",
+          "incidentId": "0388446a-cd79-4b07-9c36-0c8eea0ea66b",
+          "location": "src/test/java/hu/bp/movieinfo/client/OmdbClientTest.java",
+          "locationKind": "File",
+          "line": 14,
+          "column": 0,
+          "targets": {
+            "azure-aks": {
+              "effort": 3,
+              "severity": "optional"
+            },
+            "azure-appservice": {
+              "effort": 3,
+              "severity": "optional"
+            },
+            "azure-container-apps": {
+              "effort": 3,
+              "severity": "optional"
+            }
+          },
+          "labels": [
+            "type=violation",
+            "ruleset=cloud-readiness"
+          ]
+        },
+        {
+          "ruleId": "hardcoded-urls-00001",
+          "incidentId": "8bf1fbbe-d4b6-46dc-803e-3bbc7f3abb4b",
+          "location": "src/test/java/hu/bp/movieinfo/client/OmdbClientTest.java",
+          "locationKind": "File",
+          "line": 26,
+          "column": 0,
+          "targets": {
+            "azure-aks": {
+              "effort": 3,
+              "severity": "optional"
+            },
+            "azure-appservice": {
+              "effort": 3,
+              "severity": "optional"
+            },
+            "azure-container-apps": {
+              "effort": 3,
+              "severity": "optional"
+            }
+          },
+          "labels": [
+            "type=violation",
+            "ruleset=cloud-readiness"
+          ]
+        },
+        {
+          "ruleId": "unsecure-network-protocol-00000",
+          "incidentId": "ab0c3fb7-1a33-4269-9524-b943e4bc0e8b",
+          "location": "src/main/resources/application.properties",
+          "locationKind": "File",
+          "line": 8,
+          "column": 0,
+          "targets": {
+            "azure-aks": {
+              "effort": 3,
+              "severity": "mandatory"
+            },
+            "azure-appservice": {
+              "effort": 3,
+              "severity": "mandatory"
+            },
+            "azure-container-apps": {
+              "effort": 3,
+              "severity": "mandatory"
+            }
+          },
+          "labels": [
+            "type=violation",
+            "ruleset=cloud-readiness"
+          ]
+        },
+        {
+          "ruleId": "unsecure-network-protocol-00000",
+          "incidentId": "230006e8-08cc-4117-b398-eb2dc1b81b96",
+          "location": "src/test/java/hu/bp/movieinfo/client/OmdbClientTest.java",
+          "locationKind": "File",
+          "line": 14,
+          "column": 0,
+          "targets": {
+            "azure-aks": {
+              "effort": 3,
+              "severity": "mandatory"
+            },
+            "azure-appservice": {
+              "effort": 3,
+              "severity": "mandatory"
+            },
+            "azure-container-apps": {
+              "effort": 3,
+              "severity": "mandatory"
+            }
+          },
+          "labels": [
+            "type=violation",
+            "ruleset=cloud-readiness"
+          ]
+        },
+        {
+          "ruleId": "unsecure-network-protocol-00000",
+          "incidentId": "e59b5f42-4560-49fd-a3d4-8c95258c3b0a",
+          "location": "src/test/java/hu/bp/movieinfo/client/OmdbClientTest.java",
+          "locationKind": "File",
+          "line": 26,
+          "column": 0,
+          "targets": {
+            "azure-aks": {
+              "effort": 3,
+              "severity": "mandatory"
+            },
+            "azure-appservice": {
+              "effort": 3,
+              "severity": "mandatory"
+            },
+            "azure-container-apps": {
+              "effort": 3,
+              "severity": "mandatory"
+            }
+          },
+          "labels": [
+            "type=violation",
+            "ruleset=cloud-readiness"
+          ]
+        },
+        {
+          "ruleId": "java-19-deprecate-thread-00001",
+          "incidentId": "7c791137-a8c8-4701-97ac-85060361a726",
+          "location": "src/main/java/hu/bp/movieinfo/client/MoviedbClient.java",
+          "locationKind": "File",
+          "line": 79,
+          "column": 0,
+          "targets": {
+            "azure-aks": {
+              "effort": 1,
+              "severity": "mandatory"
+            },
+            "azure-appservice": {
+              "effort": 1,
+              "severity": "mandatory"
+            },
+            "azure-container-apps": {
+              "effort": 1,
+              "severity": "mandatory"
+            }
+          },
+          "labels": [
+            "type=violation",
+            "ruleset=openjdk21/openjdk17"
+          ]
+        },
+        {
+          "ruleId": "java-19-deprecate-thread-00001",
+          "incidentId": "410bcf73-8aff-4433-9b8e-903ce1eb24e3",
+          "location": "src/main/java/hu/bp/movieinfo/client/MoviedbClient.java",
+          "locationKind": "File",
+          "line": 96,
+          "column": 0,
+          "targets": {
+            "azure-aks": {
+              "effort": 1,
+              "severity": "mandatory"
+            },
+            "azure-appservice": {
+              "effort": 1,
+              "severity": "mandatory"
+            },
+            "azure-container-apps": {
+              "effort": 1,
+              "severity": "mandatory"
+            }
+          },
+          "labels": [
+            "type=violation",
+            "ruleset=openjdk21/openjdk17"
+          ]
+        },
+        {
+          "ruleId": "java-19-deprecate-thread-00001",
+          "incidentId": "fa18b5df-8f3a-40e8-8946-560e5f83599d",
+          "location": "src/main/java/hu/bp/movieinfo/data/omdb/Converter.java",
+          "locationKind": "File",
+          "line": 10,
+          "column": 0,
+          "targets": {
+            "azure-aks": {
+              "effort": 1,
+              "severity": "mandatory"
+            },
+            "azure-appservice": {
+              "effort": 1,
+              "severity": "mandatory"
+            },
+            "azure-container-apps": {
+              "effort": 1,
+              "severity": "mandatory"
+            }
+          },
+          "labels": [
+            "type=violation",
+            "ruleset=openjdk21/openjdk17"
+          ]
+        }
+      ]
+    }
+  ],
+  "rules": {
+    "embedded-cache-16000": {
+      "id": "embedded-cache-16000",
+      "description": "The application uses a Redis cache. You can take advantage of a managed Redis service that offers scalability, high availability, and monitoring capabilities. **Azure Cache for Redis** provides features like data persistence, automatic failover, and built-in support for Redis commands, allowing you to leverage the benefits of Redis caching in your application running on Azure.\n\n * **Provision an Azure Cache for Redis**: Configure the cache size and other relevant settings based on your application's requirements.\n\n * **Update your Java code**: Replace the embedded Redis cache code in your Java application with the Azure Cache for Redis client libraries or SDKs. Update the code that establishes a connection to the Redis cache and performs cache-related operations.\n\n * **Connect to Azure Cache for Redis**: Connect your app to Azure Cache for Redis on azure by **Service Connector**. Use the connection information provided by Azure (hostname, port, access keys, etc.) to create a connection from your application.                   \"",
+      "title": "Caching - Redis Cache library",
+      "severity": "mandatory",
+      "effort": 5,
+      "links": [
+        {
+          "url": "https://learn.microsoft.com/azure/azure-cache-for-redis",
+          "title": "Azure Cache for Redis documentation"
+        },
+        {
+          "url": "https://learn.microsoft.com/azure/architecture/best-practices/caching",
+          "title": "Caching guidance"
+        },
+        {
+          "url": "https://learn.microsoft.com/en-us/azure/container-apps/services",
+          "title": "Connect Azure Cache for Redis to your application in Azure Container Apps"
+        },
+        {
+          "url": "https://learn.microsoft.com/en-us/azure/service-connector/quickstart-portal-container-apps",
+          "title": "Create a service connection in Azure Container Apps from the Azure portal"
+        },
+        {
+          "url": "https://learn.microsoft.com/en-us/azure/developer/java/migration/migrate-spring-boot-to-azure-container-apps#identify-external-caches",
+          "title": "Redis Cache found in the application"
+        },
+        {
+          "url": "https://spring.io/projects/spring-data-redis/",
+          "title": "Spring Data Redis"
+        },
+        {
+          "url": "https://search.maven.org/artifact/com.azure.spring/azure-spring-cloud-starter-cache",
+          "title": "Azure Spring Cloud Starter Cache"
+        }
+      ],
+      "labels": [
+        "target=azure-aks",
+        "target=azure-container-apps",
+        "target=azure-appservice",
+        "source",
+        "domain=cloud-readiness",
+        "category=cache-service-migration",
+        "os=windows",
+        "os=linux"
+      ]
+    },
+    "hardcoded-urls-00001": {
+      "id": "hardcoded-urls-00001",
+      "description": "This patterns verifies in source code and configuration files the presence of hardcoded URLs using the HTTP protocol (HTTP/HTTPS). This URL would need to be replaced by the new resource's URL during the Cloud migration, if any change occured.",
+      "title": "Avoid using hardcoded URLs (HTTP protocol) in source code",
+      "severity": "optional",
+      "effort": 3,
+      "labels": [
+        "target=azure-aks",
+        "target=azure-container-apps",
+        "target=azure-appservice",
+        "source",
+        "domain=cloud-readiness",
+        "category=remote-communication",
+        "os=windows",
+        "os=linux"
+      ]
+    },
+    "java-19-deprecate-thread-00001": {
+      "id": "java-19-deprecate-thread-00001",
+      "description": "This method is not final and may be overridden to return a value that is not the thread ID. Use `Thread.threadId()` instead.",
+      "title": "This method is not final and may be overridden to return a value that is not the thread ID. Use Thread.threadId() instead.",
+      "severity": "mandatory",
+      "effort": 1,
+      "links": [
+        {
+          "url": "https://cr.openjdk.org/~iris/se/19/latestSpec/api/deprecated-list.html",
+          "title": "This method is not final and may be overridden to return a value that is not the thread ID. Use Thread.threadId() instead."
+        }
+      ],
+      "labels": [
+        "source=openjdk19-",
+        "source=openjdk",
+        "capability=openjdk19+",
+        "capability=openjdk",
+        "domain=java-upgrade",
+        "category=deprecated-apis",
+        "os=windows",
+        "os=linux",
+        "target=azure-appservice",
+        "target=azure-aks",
+        "target=azure-container-apps"
+      ]
+    },
+    "localhost-http-00001": {
+      "id": "localhost-http-00001",
+      "description": "The app is trying to access local resource by HTTP, please try to migrate the resource to cloud",
+      "title": "Local HTTP Calls",
+      "severity": "mandatory",
+      "effort": 3,
+      "labels": [
+        "target=azure-aks",
+        "target=azure-container-apps",
+        "target=azure-appservice",
+        "capability=containerization",
+        "source",
+        "domain=cloud-readiness",
+        "category=local-resource-access",
+        "localhost",
+        "containerization",
+        "os=windows",
+        "os=linux"
+      ]
+    },
+    "spring-boot-to-azure-spring-boot-version-01000": {
+      "id": "spring-boot-to-azure-spring-boot-version-01000",
+      "description": "The application is using the End of OSS Support of Spring Boot Version. \nWith the officially supported new versions from Spring, you can get the best experience. Here are some steps you can take to update your application to the latest version of Spring Boot:\n\n* Choose a **supported Spring Boot version**: Check out Spring Boot Support Versions, determine the most suitable supported Spring Boot version.\\n\\n\n\n* **Update Spring Boot version**: Update the Spring Boot version of your application. There are automated tools like Rewrite to help you with the migration.\n\n* **Address code compatibility**: Review your application's codebase for any potential compatibility issues with the target Spring Boot version. Update deprecated APIs or features, address any language or library changes, and ensure that your code follows best practices and standards.\n\n* **Test thoroughly**: Execute a comprehensive testing process to verify the compatibility and functionality of your application with the new Spring Boot version. Perform unit tests, integration tests, and system tests to validate that all components and dependencies work as expected.\"",
+      "title": "Spring Boot Version is End of OSS Support",
+      "severity": "mandatory",
+      "effort": 8,
+      "links": [
+        {
+          "url": "https://learn.microsoft.com/azure/developer/java/migration/migrate-spring-boot-to-azure-container-apps",
+          "title": "Migrate Spring Boot applications to Azure Container Apps"
+        },
+        {
+          "url": "https://learn.microsoft.com/azure/container-apps/java-microservice-get-started?tabs=azure-cli",
+          "title": "Launch your first Java microservice application with managed Java components in Azure Container Apps"
+        },
+        {
+          "url": "https://spring.io/projects/spring-boot/#support",
+          "title": "Spring Boot Supported Versions"
+        },
+        {
+          "url": "https://github.com/spring-projects/spring-boot/wiki/Supported-Versions",
+          "title": "Spring Boot Support Policy"
+        }
+      ],
+      "labels": [
+        "source=springboot",
+        "target=azure-appservice",
+        "target=azure-aks",
+        "target=azure-container-apps",
+        "domain=java-upgrade",
+        "category=framework-upgrade",
+        "version",
+        "os=windows",
+        "os=linux"
+      ]
+    },
+    "spring-framework-version-01000": {
+      "id": "spring-framework-version-01000",
+      "description": "Your application is using the Spring Framework version End of OSS Support. \nUpgrading to a supported version ensures better performance, security, and compatibility with modern tools.\n  1. Pick a Supported Version: Review the Spring Framework support policy and choose an actively supported version.\n  2. Update Your Project: Change the Spring Framework version in your pom.xml or build.gradle.\n  3. Fix Compatibility Issues: Update deprecated code, replace removed features, and ensure dependencies are compatible with the new Spring Framework version.\n  4. Thoroughly Test: Run unit, integration, and end-to-end tests to make sure everything still works after the upgrade.",
+      "title": "Spring Framework Version End of OSS Support",
+      "severity": "mandatory",
+      "effort": 8,
+      "links": [
+        {
+          "url": "https://spring.io/projects/spring-framework#support",
+          "title": "Spring Framework Supported Versions"
+        },
+        {
+          "url": "https://github.com/spring-projects/spring-framework/wiki/Spring-Framework-Versions",
+          "title": "Spring Framework Support Policy"
+        }
+      ],
+      "labels": [
+        "source=spring",
+        "target=azure-appservice",
+        "target=azure-aks",
+        "target=azure-container-apps",
+        "domain=java-upgrade",
+        "category=framework-upgrade",
+        "version",
+        "os=windows",
+        "os=linux"
+      ]
+    },
+    "unsecure-network-protocol-00000": {
+      "id": "unsecure-network-protocol-00000",
+      "description": "Using secured protocols such as HTTPS and SFTP (over HTTP and FTP) should now be the norm as applications are more and more exposed and interconnected. \nThis CloudReady patterns looks for unescured URI in the source code or deprecated URI libraries. \nIdeally, URLs should be replaced in your source code by secured protocols HTTPS and SFTP (and ensure the infrastructure implements these protocols for the resources your application calls, uses or references).",
+      "title": "Use of unsecured network protocols or URI libraries",
+      "severity": "mandatory",
+      "effort": 3,
+      "links": [
+        {
+          "url": "https://developers.google.com/web/fundamentals/security/encrypt-in-transit/why-https",
+          "title": "Why HTTPS matters"
+        },
+        {
+          "url": "https://www.ssh.com/ssh/sftp/",
+          "title": "SSH File Transfer Protocol (SFTP): Get SFTP client \u0026 server"
+        }
+      ],
+      "labels": [
+        "target=azure-aks",
+        "target=azure-container-apps",
+        "target=azure-appservice",
+        "capability=containerization",
+        "source",
+        "domain=cloud-readiness",
+        "category=remote-communication",
+        "containerization",
+        "os=windows",
+        "os=linux"
+      ]
+    }
+  }
+}
