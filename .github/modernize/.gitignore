@@ -1,1 +1,9 @@
-*
+# Allow assessment results and documentation
+!report.json
+!assessment-diagram.md
+!README.md
+
+# Ignore temporary assessment files
+appcat.log
+*.tmp
+*.temp
